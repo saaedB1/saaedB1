@@ -29,6 +29,7 @@ p {
 }
 
 .header h1 {
+  font-size: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,10 +61,6 @@ p {
   margin-right: 75%;
   font-size: 3.5rem;
   margin-bottom: 3rem;
-}
-
-h1 {
-  font-size: 45px;
 }
 
 a {
@@ -150,10 +147,11 @@ li:last-child {
   justify-content: space-evenly;
   background-color: #1e1e1e;
   color: #a1a1a1;
-  padding: 100px 0 70px;
+  padding-bottom: 70px;
 }
 
 .info h1 {
+  font-size: 45px;
   margin-bottom: 2rem;
 }
 
@@ -169,6 +167,7 @@ li:last-child {
 
 .about h1 {
   margin: 0 200px 30px;
+  font-size: 45px;
 }
 
 .profile-picture {
@@ -197,72 +196,4 @@ li:last-child {
 .contact-info p {
   margin-left: 205px;
   padding-bottom: .5rem;
-}
-
-/*  Slideshow */
-
-.slideshow h1 {
-  text-align: center;
-  margin: 100px 0 40px;
-}
-
-.mySlides img {
-  width: 900px;
-  height: 500px;
-  border-radius: 10px;
-  animation: fadein 1s;
-}
-
-.w3-display-container {
-  position: relative
-}
-
-.w3-button:hover {
-  color: #ffffff;
-  opacity: 1;
-}
-
-.w3-button {
-  border: none;
-  padding: 2% 16px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: ghostwhite;
-  opacity: .5;
-}
-
-.w3-display-left {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 40px;
-  height: 99%;
-  filter: blur(1px) contrast(50%);
-  background: #000000b7;
-  transition: all .1s;
-  border-radius: 10px 0 0 10px;
-}
-
-.w3-display-right {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 40px;
-  height: 99%;
-  filter: blur(1px) contrast(50%);
-  background: #000000b7;
-  transition: all .1s;
-  border-radius: 0 10px 10px 0;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
