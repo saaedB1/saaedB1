@@ -189,6 +189,44 @@
         </ul>
       </div>
     </div>
+
+    <div class="slideshow"> <!--  -->
+      <h1>Level Design Work</h1>
+
+      <div class="w3-display-container">
+        <div class="w3-display-container mySlides">
+          <img src="1.jpg">
+        </div>
+
+        <div class="w3-display-container mySlides">
+          <img src="2.jpg">
+        </div>
+
+        <div class="w3-display-container mySlides">
+          <img src="3.jpg">
+        </div>
+
+        <div class="w3-display-container mySlides">
+          <img src="4.jpg">
+        </div>
+
+        <div class="w3-display-container mySlides">
+          <img src="5.jpg">
+        </div>
+
+        <div class="w3-display-container mySlides">
+          <img src="6.jpg">
+        </div>
+
+        <div class="w3-display-container mySlides">
+          <img src="7.jpg">
+        </div>
+
+        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      </div>
+    </div>
+
   </div>
   <!-- End Experience Section -->
 
@@ -256,6 +294,7 @@
         <p>Trello</p>
         <p>Confluence</p>
         <p>Jira</p>
+        <p>Miro</p>
       </div>
 
       <div class="software-info">
@@ -336,6 +375,41 @@
     </div>
   </div>
   <!-- End About Section -->
+
+  <script>
+    let slideIndex = 0;
+
+    carousel();
+
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      let i;
+      const x = document.getElementsByClassName("mySlides");
+      if (n > x.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = x.length }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+
+    function carousel() {
+      let i;
+      const x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > x.length) { slideIndex = 1 }
+      x[slideIndex - 1].style.display = "block";
+      setTimeout(carousel, 5000);
+    }
+  </script>
 </body>
 
 </html>
