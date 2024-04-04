@@ -108,6 +108,7 @@ li:last-child {
   width: 100%;
   position: fixed;
   background-color: #2d2d2d;
+  z-index: 2;
 }
 
 .navbar a {
