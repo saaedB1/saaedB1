@@ -378,12 +378,14 @@
 
   <script>
     let slideIndex = 0;
+    let timer_on = true;
 
-    carousel();
+    setInterval(carousel, 5000)
 
     showDivs(slideIndex);
 
     function plusDivs(n) {
+      timer_on = false;
       showDivs(slideIndex += n);
     }
 
@@ -399,15 +401,18 @@
     }
 
     function carousel() {
-      let i;
-      const x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+      if (timer_on) {
+        let i;
+        const x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) { slideIndex = 1 }
+        x[slideIndex - 1].style.display = "block";
+      } else {
+        timer_on = true
       }
-      slideIndex++;
-      if (slideIndex > x.length) { slideIndex = 1 }
-      x[slideIndex - 1].style.display = "block";
-      setTimeout(carousel, 5000);
     }
   </script>
 </body>
